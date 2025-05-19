@@ -1,0 +1,72 @@
+app/
+├── Domain/                              
+│   ├── Entities/
+│   │   └── User.php
+│   ├── Enums/
+│   │   └── UserRole.php
+│   └── Interfaces/
+│       └── UserRepositoryInterface.php    
+│
+|
+├── Application/
+│   ├── DTOs/
+│   │   └── LoginUserDTO.php                  
+│   │   └── RegisterUserDTO.php                   
+|   |
+│   └── UseCases/
+│       └── ListUserUseCase.php               
+│       └── LoginUserUseCase.php          
+│       └── RegisterUserUseCase.php               
+|
+├── Events/
+│   └── PasswordResetRequested.php
+|
+├── Http/
+│   ├── Controllers/
+│   │   └── Controller.php
+|   └── Kernel.php
+│
+├── Infrastructure/
+│   ├── Repositories/
+│   ├   └── UserRepositoryEloquent.php     
+│   ├── Services/
+│       └── ViaCepService.php    
+│
+├── Interfaces/
+│   ├── Http/
+│   │   ├── Controllers/
+│   │   │   ├── Auth/
+│   │   │   │   └── ForgotPasswordController.php
+|   |   |   |   └── HomeController.php       
+|   |   |   |   └── LoginController.php       
+|   |   |   |   └── RegisterController.php       
+|   |   |   |   └── ResetPasswordController.php       
+|   |   |   |    
+│   │   │   └── 
+│   │   ├── Middleware/
+│   │   │   └── ******* . php
+│   │   └── Requests/
+│   │       └── RegisterRequest.php  
+│   │       └── ResetPasswordRequest.php
+|
+├── Listeners/
+|   └── SendPasswordResetEmail.php
+|
+├── Mail/
+|   └── PasswordResetMail.php
+|
+│
+├── Models/
+|   └── User.php
+|
+├── Providers/
+|   └── AppServiceProvider.php
+|   └── EventServiceProvider.php
+|
+├── database/
+│   |  ├── factories/
+│   |  ├── Services/
+│   |  ├── Services/
+|   |  
+|   └── .gitignore
+|   └── database.sqlite
